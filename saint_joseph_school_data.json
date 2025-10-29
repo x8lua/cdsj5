@@ -1,0 +1,511 @@
+{
+  "school": {
+    "name": {
+      "chinese": "聖若瑟教區中學第五校",
+      "portuguese": "Colégio Diocesano de São José (5ª)",
+      "abbreviations": ["聖若瑟五校", "五校", "CDSJ5", "聖五"]
+    },
+    "motto": "實事求是，己立立人",
+    "founded": 1931,
+    "type": "天主教私立學校",
+    "education_network": "澳門免費公共教育網",
+    "affiliation": "天主教澳門教區",
+    "location": {
+      "address": "澳門台山中街253號",
+      "district": "花地瑪堂區",
+      "coordinates": {
+        "latitude": 22.211858,
+        "longitude": 113.545383
+      }
+    },
+    "contact": {
+      "phone": ["+853 2857 4255", "+853 2823 4257"],
+      "website": "cdsj5.edu.mo"
+    },
+    "statistics": {
+      "academic_year": "2020-2021",
+      "students": 2543,
+      "teachers": 242,
+      "university_admission_rate": "97%"
+    },
+    "languages": ["英文", "中文", "葡文"],
+    "education_levels": ["幼兒", "小學", "中學"],
+    "departments": ["中文部", "英文部"]
+  },
+  "philosophy": {
+    "spirit": "耶穌基督「非以役人，乃役於人」及聖若瑟「實事求是、毅朴誠勤」",
+    "foundation": "天主教教義「信、望、愛」的精神",
+    "culture": "糅合中國傳統文化精髓",
+    "development_areas": ["靈", "德", "智", "體", "群", "美"],
+    "goals": [
+      "培養學生良好的品格",
+      "啟發創新精神",
+      "建立積極的人生觀",
+      "服務社會",
+      "造福人群"
+    ]
+  },
+  "history": {
+    "milestones": [
+      {
+        "year": 1932,
+        "event": "由蒙神父創辦的真原小學落成，位於台山李寶椿街17號",
+        "category": "創校初期"
+      },
+      {
+        "year": 1942,
+        "event": "蒙神父逝世後，學校事務交由聖安多尼堂區司鐸管理",
+        "category": "創校初期"
+      },
+      {
+        "year": 1960,
+        "event": "首次開辦夜間教育",
+        "category": "創校初期"
+      },
+      {
+        "year": 1979,
+        "event": "高秉常主教訓令聖若瑟中學與將望德中學、真原小學合併",
+        "category": "合併期"
+      },
+      {
+        "year": 1986,
+        "event": "高秉常主教諭令設聖若瑟教區中學第五校，享行政獨立",
+        "category": "合併期"
+      },
+      {
+        "year": 1989,
+        "event": "正式開辦中學部，同年B座行政樓正式落成啟用",
+        "category": "行政獨立發展期"
+      },
+      {
+        "year": 1991,
+        "month": 9,
+        "event": "獲教育暨青年司准辦英文教學，接辦原屬第六校開辦之中學英文部",
+        "category": "行政獨立發展期"
+      },
+      {
+        "year": 2000,
+        "event": "取消學生會，只舉辦五年",
+        "category": "行政獨立發展期"
+      },
+      {
+        "year": 2010,
+        "event": "首次聯同其他教區學校舉辦教區學校聯合運動會",
+        "category": "行政獨立發展期"
+      },
+      {
+        "year": 2012,
+        "month": 9,
+        "event": "增設中六課程，以便涵接大學課程",
+        "category": "行政獨立發展期"
+      },
+      {
+        "year": 2013,
+        "month": 4,
+        "event": "天主教澳門教區諭示委任郭華邦博士出任校長",
+        "category": "行政獨立發展期"
+      },
+      {
+        "year": 2013,
+        "month": 8,
+        "day": 1,
+        "event": "郭華邦博士正式接任，開展卓越教育計劃方針",
+        "category": "變革發展期"
+      },
+      {
+        "year": 2013,
+        "month": 9,
+        "day": 2,
+        "event": "宣佈復辦學生會，同時成立管弦樂團、合唱歌團、舞蹈團",
+        "category": "變革發展期"
+      },
+      {
+        "year": 2013,
+        "month": 12,
+        "day": 13,
+        "event": "獲教育暨青年局資助約二千二百萬澳門元重建校舍",
+        "category": "變革發展期"
+      },
+      {
+        "year": 2014,
+        "month": 1,
+        "day": 17,
+        "event": "B座行政樓旁體育館改建圖書館工程完工",
+        "category": "變革發展期"
+      },
+      {
+        "year": 2015,
+        "month": 7,
+        "day": 1,
+        "event": "社會文化司司長譚俊榮到訪並肯定校舍重建規劃方案",
+        "category": "變革發展期"
+      },
+      {
+        "year": 2015,
+        "month": 9,
+        "day": 8,
+        "event": "與聖若瑟大學簽定合作協議",
+        "category": "變革發展期"
+      },
+      {
+        "year": 2017,
+        "month": 8,
+        "day": 31,
+        "event": "郭華邦博士離任，卓越教育計劃結束",
+        "category": "變革發展期"
+      },
+      {
+        "year": 2017,
+        "month": 9,
+        "day": 1,
+        "event": "加入「免費教育學校系統」",
+        "category": "變革發展期"
+      },
+      {
+        "year": 2018,
+        "month": 10,
+        "event": "成立家長教師會",
+        "category": "變革發展期"
+      }
+    ]
+  },
+  "principals": [
+    {
+      "era": "真原小學時期",
+      "principals": [
+        {
+          "order": 1,
+          "name": "蒙若瑟神父",
+          "tenure": "1932 - 1942",
+          "note": "真原小學創辦校長"
+        },
+        {
+          "order": 2,
+          "name": "何心源神父",
+          "tenure": "1943 - 1946"
+        },
+        {
+          "order": 3,
+          "name": "謝亦清神父",
+          "tenure": "1946 - 1965"
+        },
+        {
+          "order": 4,
+          "name": "黃湘卿修女",
+          "tenure": "1965 - 1974"
+        },
+        {
+          "order": 5,
+          "name": "葛乃秀修女",
+          "tenure": "1974 - 1975"
+        },
+        {
+          "order": 6,
+          "name": "高天予神父",
+          "tenure": "1975 - 1976"
+        },
+        {
+          "order": 7,
+          "name": "李冠章神父",
+          "tenure": "1976 - 1977"
+        },
+        {
+          "order": 8,
+          "name": "鄧思恩神父",
+          "tenure": "1977 - 1979"
+        }
+      ]
+    },
+    {
+      "era": "聖若瑟教區中學時期",
+      "principals": [
+        {
+          "order": 9,
+          "name": "羅玉成神父",
+          "tenure": "1979 - 1986",
+          "note": "組成聖若瑟教區中學後首任校長"
+        }
+      ]
+    },
+    {
+      "era": "聖若瑟教區中學第五校時期",
+      "principals": [
+        {
+          "order": 10,
+          "name": "何發全神父",
+          "tenure": "1986 - 2013",
+          "note": "第五校行政獨立後首任校長；因年老及健康理由於2013年7月退任"
+        },
+        {
+          "order": 11,
+          "name": "郭華邦博士",
+          "tenure": "2013 - 2017",
+          "positions": [
+            "曾出任聖若瑟教區中學副校長",
+            "澳門天主教學校聯會理事長",
+            "澳門天主教教育委員會委員",
+            "澳門非高等教育委員會委員",
+            "教學人員專業委員會委員",
+            "聖若瑟大學客席教授"
+          ],
+          "note": "於2017年7月底辭任"
+        },
+        {
+          "order": 12,
+          "name": "胡錦遠博士",
+          "tenure": "2017 - 2020",
+          "note": "任內推動融合教育方針；因健康理由而於2020年7月底辭任"
+        },
+        {
+          "order": 13,
+          "name": "黃建民先生",
+          "tenure": "2020 - 現在",
+          "note": "粵華中學前副校長",
+          "status": "現任"
+        }
+      ]
+    }
+  ],
+  "school_song": {
+    "lyrics_by": "陳子良",
+    "music_by": "顏儼若",
+    "lyrics": [
+      "濠鏡喜波平　一片雅歌聲",
+      "宏校宇　育群英　育群英",
+      "都哉聖若瑟　都哉聖若瑟　大教益昌明",
+      "智以廣　德維馨　強體魄　作幹城　國土愈安寧"
+    ]
+  },
+  "administration": {
+    "school_wide": {
+      "principal": "黃建民先生"
+    },
+    "chinese_secondary": {
+      "vice_principal": "區僑恩老師",
+      "academic_director": "林鎮翔老師"
+    },
+    "english_department": {
+      "vice_principal": "麥菊娜老師",
+      "secondary_academic_director": "施利華老師",
+      "primary_academic_director": "Ms. Elizabeth Ritchie"
+    },
+    "primary": {
+      "vice_principal": "區僑恩老師",
+      "academic_director": "黃詩寶老師"
+    },
+    "kindergarten": {
+      "vice_principal": "鮑少娟老師",
+      "academic_director": "翁靄珍老師"
+    }
+  },
+  "curriculum": {
+    "kindergarten_subjects": [
+      "宗教", "公民教育", "中文", "普通話", "英文", "數學",
+      "生活自理", "藝術", "音樂", "體能活動", "電腦", "閱讀",
+      "綜合活動", "區角活動"
+    ],
+    "primary_chinese_subjects": [
+      "宗教", "公民教育", "中文", "普通話", "英文", "英會", "數學",
+      "常識", "美勞", "音樂", "體育", "電腦", "書法閱讀", "余暇活動"
+    ],
+    "primary_english_subjects": [
+      "RE", "CE", "Chinese", "PTH", "English", "Reading & Writing", "Oral",
+      "Maths", "GS", "Art", "Music", "PE", "Computer"
+    ],
+    "secondary_chinese_subjects": [
+      "宗教", "公民", "中文", "英文", "會話", "幾何", "代數",
+      "中國歷史", "世界歷史", "地理", "科學", "物理", "化學", "生物",
+      "財務會計", "經濟", "視覺藝術", "音樂", "體育", "電腦"
+    ],
+    "secondary_english_subjects": [
+      "Religious Studies", "Civic Education", "Chinese", "General English",
+      "Reading & Writing", "Oral", "Portugese", "Mathematics", "Advanced Maths",
+      "Chinese History", "World History", "Social Studies", "Geography",
+      "General Science", "Integrated Science", "Physics", "Chemistry", "Biology",
+      "Accounting", "Economic", "Bussiness Writing", "Visual Art", "Music",
+      "Physical Education", "Computer"
+    ]
+  },
+  "class_distribution_2025_2026": {
+    "kindergarten": {
+      "infant": "N/D",
+      "lower": "N/D",
+      "upper": "N/D"
+    },
+    "primary_chinese": {
+      "grade_1": 3,
+      "grade_2": 4,
+      "grade_3": 3,
+      "grade_4": 3,
+      "grade_5": 4,
+      "grade_6": 5
+    },
+    "primary_english": {
+      "grade_1": 2,
+      "grade_2": 2,
+      "grade_3": 2,
+      "grade_4": 2,
+      "grade_5": 2,
+      "grade_6": 2
+    },
+    "secondary_chinese": {
+      "junior_1": 5,
+      "junior_2": 6,
+      "junior_3": 5,
+      "senior_1": 3,
+      "senior_2": 3,
+      "senior_3": 3
+    },
+    "secondary_english": {
+      "form_1": 2,
+      "form_2": 2,
+      "form_3": 2,
+      "form_4": 2,
+      "form_5": 2,
+      "form_6": 2
+    }
+  },
+  "teaching_characteristics": {
+    "department_split": "自小學一年級開始分為中文部和英文部",
+    "chinese_department": {
+      "instruction_language": "廣東話",
+      "senior_tracks": {
+        "arts": "側重人文、社會、經濟",
+        "science": "重化學、物理、自然"
+      }
+    },
+    "english_department": {
+      "instruction_language": "英語",
+      "senior_selection": [
+        "生物/物理",
+        "化學/經濟",
+        "高等數學/會計/葡萄牙語"
+      ]
+    },
+    "university_admission": {
+      "rate": "97%",
+      "destinations": ["澳門", "台灣", "香港", "中國大陸", "國外"]
+    }
+  },
+  "student_union": {
+    "purpose": "讓學生能夠透過學生會，參與校內活動和組織各類學校活動，增加學生對學校活動建設和組織參與度，提高學生組織及領導能力，同時肩負起學生與校方溝通的橋樑角色",
+    "reestablished": 2013,
+    "election_method": "中學部一人一票普及選舉",
+    "balance_requirement": "正副會長必須由中、英文部學生分別擔任",
+    "current_session": {
+      "session": 10,
+      "year": "2022-2023",
+      "president": {
+        "name": "黃嘉欣",
+        "department": "英文部",
+        "grade": "F4A"
+      },
+      "vice_president": {
+        "name": "汪玥",
+        "department": "中文部",
+        "grade": "高一丙"
+      },
+      "activity_director": {
+        "name": "陳海琳",
+        "department": "英文部",
+        "grade": "F5B"
+      }
+    }
+  },
+  "facilities": {
+    "kindergarten": [
+      "幼兒閱讀室",
+      "兒童遊樂場",
+      "兒童午睡室"
+    ],
+    "primary": [
+      "中/小學部操場",
+      "小學電腦室",
+      "小學音樂室",
+      "英文閱讀室（可能現已撤消）",
+      "跳遠沙池（現已撤消）"
+    ],
+    "secondary": [
+      "中/小學部操場",
+      "中學電腦室",
+      "圖書館",
+      "吉他室（可能現已撤消）",
+      "電子琴室（現已撤消）",
+      "中學音樂室（現已撤消）",
+      "美術室（現已撤消）",
+      "生物室",
+      "實驗室",
+      "綜合室",
+      "天台乒乓球場",
+      "跳遠沙池（現已撤消）"
+    ]
+  },
+  "trivia": [
+    {
+      "title": "因校服相若設計致混淆兩校學生",
+      "description": "聖若瑟教區中學第五校與聖若瑟教區中學名字相似，加上學校位置和校服都大致相同（聖五男生是灰色西褲、女生紅邊校裙，聖六男生是白色西褲、女生橙邊校裙），只有校徽顏色都不一樣（聖五是紅色，聖六是橙色），經常被人混淆兩校學生。",
+      "type": "confusion"
+    },
+    {
+      "title": "前校長涉嫌伙同工程公司騙取資助",
+      "description": "2020年9月29日，澳門司法警察局拘捕了蕭姓前副校長及工程公司一對陳姓兄妹。司警指北區一間學校曾申請二千八百萬資助，資助內容包括582項課程及硬件項目，但實際僅完成61項，並以舊資料偽造文件訛稱完成獲資助項目，從而詐騙公帑。",
+      "type": "controversy",
+      "date": "2020-09-29"
+    },
+    {
+      "title": "黃建民校長與前校關係緊密致前校出現「過檔」潮",
+      "description": "2020年黃建民先生遭受教區安排從前校粵華中學移職到本校擔任校長，在其後因前校出現高層人士調動，導致大量老師不滿，亦因校長與前校老師們關係緊密，因此，前校大量老師「過檔」到本校就職。",
+      "type": "staff_movement",
+      "date": "2020"
+    }
+  ],
+  "notable_alumni": {
+    "politics_business": [
+      {
+        "name": "蘇嘉豪",
+        "description": "第六屆澳門立法會直選議員、新澳門學社理事、報章專欄作者"
+      }
+    ],
+    "culture_entertainment": [
+      {
+        "name": "陳毅鋒",
+        "alias": "老陳",
+        "description": "澳門食評家，擔任澳門和香港報張雜誌美食專欄作家，專寫關於澳門地道食店的介紹"
+      },
+      {
+        "name": "陳宇健",
+        "description": "澳門電視台及澳門電視台節目主持人"
+      },
+      {
+        "name": "何裕文",
+        "description": "澳門電台節目澳門講場主持人，現職廉政公署"
+      }
+    ],
+    "sports": [
+      {
+        "name": "梁志堅",
+        "description": "澳門射擊隊隊員"
+      },
+      {
+        "name": "魏金雄",
+        "description": "利瑪竇中學行政主任、澳門排球代表隊球員、澳門學界男子排球代表隊教練"
+      }
+    ],
+    "higher_education": [
+      {
+        "name": "林沅酉",
+        "description": "理工學院健康科學及體育高等學校學生會理事長（2020年度）、理工學院男、女子手球隊教練"
+      },
+      {
+        "name": "李嘉華",
+        "description": "淡江大學港澳會106學年副會長、坊眾互助會青年委員會成員"
+      }
+    ]
+  },
+  "meta": {
+    "source": "維基百科",
+    "last_updated": "2025-10-29",
+    "language": "繁體中文",
+    "encoding": "UTF-8"
+  }
+}
