@@ -1,249 +1,255 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>聖若瑟教區中學第五校 - CDSJ5</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif;
-        }
-
-        .bg-lobby {
-            background-image: url('https://raw.githubusercontent.com/x8lua/cdsj5/main/lobby.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
+    <!DOCTYPE html>
+    <html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>聖若瑟教區中學第五校 - CDSJ5</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            body {
+                font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            .bg-lobby {
+                background-image: url('https://raw.githubusercontent.com/x8lua/cdsj5/main/lobby.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
             }
-        }
 
-        @keyframes modalZoom {
-            0% {
-                transform: scale(0.8);
-                opacity: 0;
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
-            100% {
-                transform: scale(1);
-                opacity: 1;
+
+            @keyframes modalZoom {
+                0% {
+                    transform: scale(0.8);
+                    opacity: 0;
+                }
+                100% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
             }
-        }
 
-        .animate-fade-in {
-            animation: fadeIn 1s ease-in;
-        }
+            .animate-fade-in {
+                animation: fadeIn 1s ease-in;
+            }
 
-        .animate-modal-zoom {
-            animation: modalZoom 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+            .animate-modal-zoom {
+                animation: modalZoom 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
 
-        .modal-scrollbar::-webkit-scrollbar {
-            width: 8px;
-        }
+            .modal-scrollbar::-webkit-scrollbar {
+                width: 8px;
+            }
 
-        .modal-scrollbar::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
+            .modal-scrollbar::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 10px;
+            }
 
-        .modal-scrollbar::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
-        }
+            .modal-scrollbar::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 10px;
+            }
 
-        .modal-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-    </style>
-</head>
-<body class="overflow-hidden">
-    <!-- Disclaimer Overlay -->
-    <div id="disclaimer" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 transition-opacity duration-500">
-        <div class="bg-white rounded-2xl p-10 max-w-2xl w-11/12 shadow-2xl">
-            <h1 class="text-red-600 text-2xl font-bold mb-3">免責聲明</h1>
-            <h2 class="text-gray-800 text-xl font-semibold mb-5">重要聲明：非官方學生專案</h2>
-            <p class="text-gray-600 leading-relaxed mb-4">歡迎訪問 CRLogger / cdsj5.com。 本網站是由聖若瑟教區中學第五校（CDSJ5）學生自發建立的非官方、個人技術練習平台。</p>
-            <p class="text-gray-600 leading-relaxed mb-4"><strong class="text-gray-800">非官方屬性：</strong>本站及其內容與校方官方行政部門無關，並不代表學校立場。</p>
-            <p class="text-gray-600 leading-relaxed mb-4"><strong class="text-gray-800">責任限制：</strong>開發者不對因使用本站資訊而產生的任何直接或間接損失負責。請以校方正式公佈之資訊為準。</p>
-            <p class="text-gray-600 leading-relaxed mb-4"><strong class="text-gray-800">版權說明：</strong>本站可能包含部分校園相關參考資訊，僅用於教學與研究之「合理使用」範疇。</p>
-            <p class="text-gray-600 leading-relaxed mb-6">點擊下方按鈕即表示您已閱讀並知悉上述聲明。</p>
-            <button onclick="acceptDisclaimer()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 rounded-lg transition-colors duration-300">
-                我知道了，進入網站
-            </button>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <div id="main-content" class="fixed inset-0 bg-lobby flex flex-col items-center justify-center">
-        <h1 class="text-white text-7xl font-bold mb-12 animate-fade-in" style="text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);">
-            歡迎來到UGC聖五
-        </h1>
-
-        <div class="flex flex-col items-center gap-6 animate-fade-in">
-            <!-- Button 1 -->
-            <div class="relative group">
-                <button onclick="openModal('modal1')" class="relative inline-block p-px font-semibold leading-6 text-white bg-gray-800 shadow-2xl cursor-pointer rounded-xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
-                    <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-                    <span class="relative z-10 block px-8 py-4 rounded-xl bg-gray-950">
-                        <div class="relative z-10 flex items-center space-x-2">
-                            <span class="transition-all duration-500 group-hover:translate-x-1 text-lg">學校官網</span>
-                            <svg class="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path clip-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" fill-rule="evenodd"></path>
-                            </svg>
-                        </div>
-                    </span>
-                </button>
-            </div>
-
-            <!-- Button 2 -->
-            <div class="relative group">
-                <button onclick="openModal('modal2')" class="relative inline-block p-px font-semibold leading-6 text-white bg-gray-800 shadow-2xl cursor-pointer rounded-xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
-                    <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-                    <span class="relative z-10 block px-8 py-4 rounded-xl bg-gray-950">
-                        <div class="relative z-10 flex items-center space-x-2">
-                            <span class="transition-all duration-500 group-hover:translate-x-1 text-lg">為什麽要弄這個</span>
-                            <svg class="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path clip-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" fill-rule="evenodd"></path>
-                            </svg>
-                        </div>
-                    </span>
+            .modal-scrollbar::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+        </style>
+    </head>
+    <body class="overflow-hidden">
+        <!-- Disclaimer Overlay -->
+        <div id="disclaimer" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 transition-opacity duration-500">
+            <div class="bg-white rounded-2xl p-10 max-w-2xl w-11/12 shadow-2xl">
+                <h1 class="text-red-600 text-2xl font-bold mb-3">免責聲明</h1>
+                <h2 class="text-gray-800 text-xl font-semibold mb-5">重要聲明：非官方學生專案</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">歡迎訪問 CRLogger / cdsj5.com。 本網站是由聖若瑟教區中學第五校（CDSJ5）學生自發建立的非官方、個人技術練習平台。</p>
+                <p class="text-gray-600 leading-relaxed mb-4"><strong class="text-gray-800">非官方屬性：</strong>本站及其內容與校方官方行政部門無關，並不代表學校立場。</p>
+                <p class="text-gray-600 leading-relaxed mb-4"><strong class="text-gray-800">責任限制：</strong>開發者不對因使用本站資訊而產生的任何直接或間接損失負責。請以校方正式公佈之資訊為準。</p>
+                <p class="text-gray-600 leading-relaxed mb-4"><strong class="text-gray-800">版權說明：</strong>本站可能包含部分校園相關參考資訊，僅用於教學與研究之「合理使用」範疇。</p>
+                <p class="text-gray-600 leading-relaxed mb-6">點擊下方按鈕即表示您已閱讀並知悉上述聲明。</p>
+                <button onclick="acceptDisclaimer()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 rounded-lg transition-colors duration-300">
+                    我知道了，進入網站
                 </button>
             </div>
         </div>
-    </div>
 
-    <!-- Modal 1: Wrong Place Message -->
-    <div id="modal1" class="hidden fixed inset-0 bg-black bg-opacity-80 backdrop-blur-md items-center justify-center z-50" onclick="closeModalOnOutside(event, 'modal1')">
-        <div class="bg-white rounded-3xl p-10 max-w-2xl w-11/12 max-h-[85vh] overflow-y-auto shadow-2xl animate-modal-zoom modal-scrollbar" onclick="event.stopPropagation()">
-            <div class="flex items-start gap-4 mb-6">
-                <div class="text-5xl">📍</div>
-                <div>
-                    <h2 class="text-gray-900 text-2xl font-bold mb-2">哦，你應該是在找那個標準風格的官網吧？</h2>
-                    <p class="text-gray-500 text-sm">Looking for the official website?</p>
+        <!-- Main Content -->
+        <div id="main-content" class="fixed inset-0 bg-lobby flex flex-col items-center justify-center">
+            <h1 class="text-white text-7xl font-bold mb-12 animate-fade-in" style="text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);">
+                歡迎來到UGC聖五
+            </h1>
+
+            <div class="flex flex-col items-center gap-6 animate-fade-in">
+                <!-- Button 1 -->
+                <div class="relative group">
+                    <button onclick="openModal('modal1')" class="relative inline-block p-px font-semibold leading-6 text-white bg-gray-800 shadow-2xl cursor-pointer rounded-xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
+                        <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+                        <span class="relative z-10 block px-8 py-4 rounded-xl bg-gray-950">
+                            <div class="relative z-10 flex items-center space-x-2">
+                                <span class="transition-all duration-500 group-hover:translate-x-1 text-lg">學校官網</span>
+                                <svg class="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path clip-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" fill-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Button 2 -->
+                <div class="relative group">
+                    <button onclick="openModal('modal2')" class="relative inline-block p-px font-semibold leading-6 text-white bg-gray-800 shadow-2xl cursor-pointer rounded-xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
+                        <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+                        <span class="relative z-10 block px-8 py-4 rounded-xl bg-gray-950">
+                            <div class="relative z-10 flex items-center space-x-2">
+                                <span class="transition-all duration-500 group-hover:translate-x-1 text-lg">為什麽要弄這個</span>
+                                <svg class="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path clip-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" fill-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </span>
+                    </button>
                 </div>
             </div>
+        </div>
 
-            <div class="space-y-4 mb-6">
-                <p class="text-gray-700 leading-relaxed">
-                    沒關係，這裡是由學生自發設計的非官方練習空間。如果你是來處理行政事務或看正式公告的，請點擊下方跳轉：
+        <!-- Modal 1: Wrong Place Message -->
+        <div id="modal1" class="hidden fixed inset-0 bg-black bg-opacity-80 backdrop-blur-md items-center justify-center z-50" onclick="closeModalOnOutside(event, 'modal1')">
+            <div class="bg-white rounded-3xl p-10 max-w-2xl w-11/12 max-h-[85vh] overflow-y-auto shadow-2xl animate-modal-zoom modal-scrollbar" onclick="event.stopPropagation()">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="text-5xl">📍</div>
+                    <div>
+                        <h2 class="text-gray-900 text-2xl font-bold mb-2">哦，你應該是在找那個標準風格的官網吧？</h2>
+                        <p class="text-gray-500 text-sm">Looking for the official website?</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4 mb-6">
+                    <p class="text-gray-700 leading-relaxed">
+                        沒關係，這裡是由學生自發設計的非官方練習空間。如果你是來處理行政事務或看正式公告的，請點擊下方跳轉：
+                    </p>
+
+                    <a href="https://www.cdsj5.edu.mo" target="_blank" class="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-2xl border-2 border-gray-200 hover:border-gray-300 transition-all duration-300 group">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-2xl">
+                                🏫
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-900">官方網站</div>
+                                <div class="text-sm text-gray-500">cdsj5.edu.mo</div>
+                            </div>
+                        </div>
+                        <svg class="w-6 h-6 text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        既然都進來了，不如留下來看看這個學生視角的界面？反正也不急於那一分鐘。
+                    </p>
+                </div>
+
+                <button onclick="closeModal('modal1')" class="w-full bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3.5 rounded-xl transition-colors duration-300">
+                    關閉
+                </button>
+            </div>
+        </div>
+
+        <!-- Modal 2: Why This Exists -->
+        <div id="modal2" class="hidden fixed inset-0 bg-black bg-opacity-80 backdrop-blur-md items-center justify-center z-50" onclick="closeModalOnOutside(event, 'modal2')">
+            <div class="bg-white rounded-3xl p-10 max-w-2xl w-11/12 max-h-[85vh] overflow-y-auto shadow-2xl animate-modal-zoom modal-scrollbar" onclick="event.stopPropagation()">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="text-5xl">💭</div>
+                    <div>
+                        <h2 class="text-gray-900 text-2xl font-bold mb-2">為什麼要整這個？</h2>
+                        <p class="text-gray-500 text-sm">Why does this exist?</p>
+                    </div>
+                </div>
+
+                <p class="text-gray-600 mb-6">
+                    其實也沒什麼深奧的理由。
                 </p>
 
-                <a href="https://www.cdsj5.edu.mo" target="_blank" class="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-2xl border-2 border-gray-200 hover:border-gray-300 transition-all duration-300 group">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-2xl">
-                            🏫
-                        </div>
-                        <div>
-                            <div class="font-semibold text-gray-900">官方網站</div>
-                            <div class="text-sm text-gray-500">cdsj5.edu.mo</div>
+                <div class="space-y-4 mb-6">
+                    <div class="p-5 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-100">
+                        <div class="flex items-start gap-3">
+                            <div class="text-2xl">😴</div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">因為無聊 (Pure Boredom)</h3>
+                                <p class="text-gray-700 text-sm leading-relaxed">寫代碼對我來說就是一種消磨時間的方式，就像有人喜歡打球或畫畫一樣</p>
+                            </div>
                         </div>
                     </div>
-                    <svg class="w-6 h-6 text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </a>
 
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    既然都進來了，不如留下來看看這個學生視角的界面？反正也不急於那一分鐘。
-                </p>
+                    <div class="p-5 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl border border-purple-100">
+                        <div class="flex items-start gap-3">
+                            <div class="text-2xl">💻</div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">技術練習</h3>
+                                <p class="text-gray-700 text-sm leading-relaxed">我更喜歡親手搞定域名和資料庫這種實操的東西</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border border-green-100">
+                        <div class="flex items-start gap-3">
+                            <div class="text-2xl">🎮</div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">純粹好玩</h3>
+                                <p class="text-gray-700 text-sm leading-relaxed">與其問為什麼要整，不如說是因為我想看看自己能把一個網站做到什麼程度。這就是一個我的個人實驗室</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="closeModal('modal2')" class="w-full bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3.5 rounded-xl transition-colors duration-300">
+                    關閉
+                </button>
             </div>
-
-            <button onclick="closeModal('modal1')" class="w-full bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3.5 rounded-xl transition-colors duration-300">
-                關閉
-            </button>
         </div>
-    </div>
 
-    <!-- Modal 2: Why This Exists -->
-    <div id="modal2" class="hidden fixed inset-0 bg-black bg-opacity-80 backdrop-blur-md items-center justify-center z-50" onclick="closeModalOnOutside(event, 'modal2')">
-        <div class="bg-white rounded-3xl p-10 max-w-2xl w-11/12 max-h-[85vh] overflow-y-auto shadow-2xl animate-modal-zoom modal-scrollbar" onclick="event.stopPropagation()">
-            <div class="flex items-start gap-4 mb-6">
-                <div class="text-5xl">💭</div>
-                <div>
-                    <h2 class="text-gray-900 text-2xl font-bold mb-2">為什麼要整這個？</h2>
-                    <p class="text-gray-500 text-sm">Why does this exist?</p>
-                </div>
-            </div>
-
-            <p class="text-gray-600 mb-6">
-                其實也沒什麼深奧的理由。
-            </p>
-
-            <div class="space-y-4 mb-6">
-                <div class="p-5 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-100">
-                    <div class="flex items-start gap-3">
-                        <div class="text-2xl">😴</div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 mb-1">因為無聊 (Pure Boredom)</h3>
-                            <p class="text-gray-700 text-sm leading-relaxed">寫代碼對我來說就是一種消磨時間的方式，就像有人喜歡打球或畫畫一樣</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-5 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl border border-purple-100">
-                    <div class="flex items-start gap-3">
-                        <div class="text-2xl">💻</div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 mb-1">技術練習</h3>
-                            <p class="text-gray-700 text-sm leading-relaxed">我更喜歡親手搞定域名和資料庫這種實操的東西</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-5 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border border-green-100">
-                    <div class="flex items-start gap-3">
-                        <div class="text-2xl">🎮</div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 mb-1">純粹好玩</h3>
-                            <p class="text-gray-700 text-sm leading-relaxed">與其問為什麼要整，不如說是因為我想看看自己能把一個網站做到什麼程度。這就是一個我的個人實驗室</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <button onclick="closeModal('modal2')" class="w-full bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3.5 rounded-xl transition-colors duration-300">
-                關閉
-            </button>
-        </div>
-    </div>
-
-    <script>
-        function acceptDisclaimer() {
-            const disclaimer = document.getElementById('disclaimer');
-            disclaimer.style.opacity = '0';
-            disclaimer.style.pointerEvents = 'none';
-            setTimeout(() => {
-                disclaimer.style.display = 'none';
-            }, 500);
-        }
-
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-        }
-
-        function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-        }
-
-        function closeModalOnOutside(event, modalId) {
-            if (event.target.id === modalId) {
-                closeModal(modalId);
+        <script>
+            function acceptDisclaimer() {
+                const disclaimer = document.getElementById('disclaimer');
+                disclaimer.style.opacity = '0';
+                disclaimer.style.pointerEvents = 'none';
+                setTimeout(() => {
+                    disclaimer.style.display = 'none';
+                }, 500);
             }
-        }
-    </script>
-</body>
-</html>
+
+            function openModal(modalId) {
+                const modal = document.getElementById(modalId);
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+
+            function closeModal(modalId) {
+                const modal = document.getElementById(modalId);
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+
+            function closeModalOnOutside(event, modalId) {
+                if (event.target.id === modalId) {
+                    closeModal(modalId);
+                }
+            }
+        </script>
+
+        <!-- Vercel Analytics -->
+        <script>
+            window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+        </script>
+        <script defer src="/_vercel/insights/script.js"></script>
+    </body>
+    </html>
